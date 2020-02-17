@@ -1,0 +1,141 @@
+[
+  {
+    "uri": "features/consultaCEP.feature",
+    "id": "consulta-cep-da-api",
+    "keyword": "Funcionalidade",
+    "name": "Consulta CEP da API",
+    "description": "    Sendo um usuário que desejo capturar  dados de um CEP\n    Devo acessar a API do viaCEP\n    Para opter os dados do IBGE",
+    "line": 2,
+    "elements": [
+      {
+        "id": "consulta-cep-da-api;buscando-o-ibge-de-um-cep",
+        "keyword": "Cenário",
+        "name": "Buscando o IBGE de um CEP",
+        "description": "",
+        "line": 7,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "busco o cep \"01001000\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 676025300
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "recebo o status \"200\"",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2989500
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "recebo o valor do campo IBGE",
+            "line": 10,
+            "output": [
+              "O codigo do IBGE do CEP 01001000 é 3550308"
+            ],
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129500
+            }
+          }
+        ]
+      },
+      {
+        "id": "consulta-cep-da-api;buscando-um-cep-inválido-com-dígitos-a-mais",
+        "keyword": "Cenário",
+        "name": "Buscando um CEP inválido com dígitos a mais",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "busco o cep \"123456700\"",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 461203400
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "recebo o status \"400\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134600
+            }
+          }
+        ]
+      },
+      {
+        "id": "consulta-cep-da-api;buscando-um-cep-inexistente",
+        "keyword": "Cenário",
+        "name": "Buscando um CEP inexistente",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "busco o cep \"11001000\"",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 432725400
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "recebo o status \"200\"",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "recebo o valor do campo Erro como true",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/consultaCEP_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73700
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
