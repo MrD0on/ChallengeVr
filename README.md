@@ -11,7 +11,7 @@ Conclusão do Desafio VIACEP
 
   - Rodar o comando  no diretório do projeto ```bundle install``` afim de instalar as dependências.
 
-  - Para ver a automação rodando basta rodar o comando ```cucumber```. PS: Se estiver no mac/linux é necessário rodar o comando ```bundle exec cucumber```
+  - Para ver a automação rodando basta executar o comando ```cucumber```. PS: Se estiver no mac/linux é necessário rodar o comando ```bundle exec cucumber```
 
 **OBS:** Foi feito a implementação de um relatório pela ferramenta ReportBuilder que se encontra na pasta Log na raiz do projeto. Assim que executar a automação é gerado um novo report.
 
